@@ -10,7 +10,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 window.$primaryLanguage = 'en';
 window.$secondaryLanguage = 'pl';
 window.$primaryLanguageIconId = 'primary-lang-icon';
-window.$secondaryLanguageIconId = 'secondary-lang-icon';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);

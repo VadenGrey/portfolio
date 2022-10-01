@@ -18,6 +18,18 @@ class App extends Component {
     };
   }
 
+  applyPickedLanguage = (pickedLanguage) => {
+    document.documentElement.lang = pickedLanguage;
+    this.loadResumeFromPath(`res_primaryLanguage.json`);
+  }
+
+  componentDidMount = () => {
+    this.loadSharedData();
+    this.applyPickedLanguage(
+      window.$primaryLanguage
+    );
+  }
+
   loadResumeFromPath = (path) => {
     $.ajax({
       url: path,
